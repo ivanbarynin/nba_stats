@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>NBAStats — Главная</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+
+
+<body class="bg-gray-50 text-gray-900">
+
+<!-- HEADER -->
+<header class="bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- ЛОГО -->
+    <div class="flex items-center space-x-3">
+      <img src="assets/logo.png" alt="Logo" class="h-8">
+      <span class="text-xl font-bold">NBAStats</span>
+    </div>
+
+    <!-- НАВИГАЦИЯ -->
+    <nav class="space-x-6 text-sm font-medium">
+      <a href="index.html" class="text-black border-b-2 border-black pb-1">Главная</a>
+      <a href="players.html" class="text-gray-600 hover:text-black">Игроки</a>
+      <a href="compare.html" class="text-gray-600 hover:text-black">Сравнение</a>
+      <a href="contacts.html" class="text-gray-600 hover:text-black">Контакты</a>
+      <a href="faq.html" class="text-gray-600 hover:text-black">FAQ</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ПРОШЕДШИЕ МАТЧИ -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <h2 class="text-2xl font-semibold mb-8">Прошедшие матчи</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 items-start">
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <div class="flex justify-between mb-4">
+        <span>Lakers</span>
+        <span class="font-semibold">110</span>
+      </div>
+      <div class="flex justify-between">
+        <span>Warriors</span>
+        <span class="font-semibold">104</span>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <div class="flex justify-between mb-4">
+        <span>Bucks</span>
+        <span class="font-semibold">120</span>
+      </div>
+      <div class="flex justify-between">
+        <span>Celtics</span>
+        <span class="font-semibold">118</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MVP -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-2xl font-semibold mb-8">MVP прошедшего матча</h2>
+
+    <div class="bg-white rounded-xl shadow p-6 flex flex-col md:flex-row items-center md:items-start gap-8">
+
+      <!-- Фото игрока -->
+      <div class="w-48 flex-shrink-0">
+        <img src="assets/mvp-player.png"
+             alt="MVP Player"
+             class="rounded-xl object-cover w-full">
+      </div>
+
+      <!-- Статистика -->
+      <div class="flex-1">
+
+        <h3 class="text-xl font-semibold mb-4">
+          Nikola Jokic
+        </h3>
+
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <div>
+            <p class="text-2xl font-bold">34</p>
+            <p class="text-sm text-gray-500">PTS</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold">12</p>
+            <p class="text-sm text-gray-500">REB</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold">9</p>
+            <p class="text-sm text-gray-500">AST</p>
+          </div>
+        </div>
+
+        <!-- Логотип соперника -->
+        <div class="flex items-center space-x-3">
+          <span class="text-sm text-gray-500">
+            Против:
+          </span>
+          <img src="assets/lakers-logo.png"
+               alt="Opponent"
+               class="h-8 object-contain">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ТАБЛИЦА + ТОП ИГРОКИ -->
+<section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
+
+  <!-- ТАБЛИЦА КОНФЕРЕНЦИЙ -->
+<div class="md:col-span-2">
+  <h2 class="text-2xl font-semibold mb-6">Таблица конференций</h2>
+
+  <!-- Переключатель -->
+  <div class="flex space-x-4 mb-6">
+    <button id="eastBtn"
+      class="px-4 py-2 bg-black text-white rounded-lg text-sm">
+      Восток
+    </button>
+    <button id="westBtn"
+      class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm">
+      Запад
+    </button>
+  </div>
+
+  <!-- Восточная конференция -->
+  <div id="eastTable" class="bg-white rounded-xl shadow overflow-hidden">
+    <table class="w-full text-sm">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="p-4 text-left">Команда</th>
+          <th class="p-4 text-left">W</th>
+          <th class="p-4 text-left">L</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t">
+          <td class="p-4">Boston Celtics</td>
+          <td class="p-4">50</td>
+          <td class="p-4">20</td>
+        </tr>
+        <tr class="border-t">
+          <td class="p-4">Milwaukee Bucks</td>
+          <td class="p-4">48</td>
+          <td class="p-4">22</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Западная конференция -->
+  <div id="westTable" class="bg-white rounded-xl shadow overflow-hidden hidden">
+    <table class="w-full text-sm">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="p-4 text-left">Команда</th>
+          <th class="p-4 text-left">W</th>
+          <th class="p-4 text-left">L</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t">
+          <td class="p-4">Denver Nuggets</td>
+          <td class="p-4">52</td>
+          <td class="p-4">18</td>
+        </tr>
+        <tr class="border-t">
+          <td class="p-4">Phoenix Suns</td>
+          <td class="p-4">46</td>
+          <td class="p-4">24</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+  <!-- ТОП ИГРОКИ -->
+  <div>
+    <h2 class="text-2xl font-semibold mb-6">Топ игроков</h2>
+
+    <div class="bg-white rounded-xl shadow p-6 space-y-4">
+
+      <div class="flex justify-between">
+        <span>Stephen Curry</span>
+        <span class="font-semibold">30.1 PTS</span>
+      </div>
+
+      <div class="flex justify-between">
+        <span>Luka Dončić</span>
+        <span class="font-semibold">29.8 PTS</span>
+      </div>
+
+      <div class="flex justify-between">
+        <span>Giannis</span>
+        <span class="font-semibold">29.5 PTS</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-12 mt-10">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+    <div>
+      <h3 class="font-semibold mb-3">Контакты</h3>
+      <p class="text-gray-400 text-sm">Email: contact@nbastats.com</p>
+      <p class="text-gray-400 text-sm">Тел: +7 777 123 45 67</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold mb-3">Социальные сети</h3>
+      <div class="flex space-x-4">
+        <img src="assets/instagram.svg" class="h-5">
+        <img src="assets/telegram.svg" class="h-5">
+        <img src="assets/youtube.svg" class="h-5">
+      </div>
+    </div>
+
+    <div class="text-sm text-gray-500 flex items-end">
+      © 2026 NBAStats
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const eastBtn = document.getElementById('eastBtn');
+  const westBtn = document.getElementById('westBtn');
+  const eastTable = document.getElementById('eastTable');
+  const westTable = document.getElementById('westTable');
+
+  eastBtn.addEventListener('click', () => {
+    eastTable.classList.remove('hidden');
+    westTable.classList.add('hidden');
+
+    eastBtn.classList.remove('bg-gray-200', 'text-gray-700');
+    eastBtn.classList.add('bg-black', 'text-white');
+
+    westBtn.classList.remove('bg-black', 'text-white');
+    westBtn.classList.add('bg-gray-200', 'text-gray-700');
+  });
+
+  westBtn.addEventListener('click', () => {
+    westTable.classList.remove('hidden');
+    eastTable.classList.add('hidden');
+
+    westBtn.classList.remove('bg-gray-200', 'text-gray-700');
+    westBtn.classList.add('bg-black', 'text-white');
+
+    eastBtn.classList.remove('bg-black', 'text-white');
+    eastBtn.classList.add('bg-gray-200', 'text-gray-700');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Твои кастомные стили ниже */
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}

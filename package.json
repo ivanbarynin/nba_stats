@@ -1,0 +1,27 @@
+{
+  "name": "nbastats-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19"
+  },
+  "description": "***NBAStats***",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanbarynin/nba_stats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ivanbarynin/nba_stats/issues"
+  },
+  "homepage": "https://github.com/ivanbarynin/nba_stats#readme"
+}
