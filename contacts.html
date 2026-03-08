@@ -1,76 +1,241 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Контакты — NBAStats</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-900">
 
-<header class="bg-white shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="index.html" class="text-xl font-bold">NBAStats</a>
-    <nav class="space-x-6 text-sm font-medium">
-      <a href="index.html" class="text-gray-600 hover:text-black">Главная</a>
-      <a href="contacts.html" class="text-black border-b-2 border-black pb-1">Контакты</a>
-      <a href="faq.html" class="text-gray-600 hover:text-black">FAQ</a>
-    </nav>
-  </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Контакты | NBA Stats</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+<!-- HEADER -->
+
+<header class="bg-black text-white">
+
+<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<h1 class="text-xl font-bold">
+NBA Stats
+</h1>
+
+<nav class="space-x-6 text-sm">
+
+<a href="index.html" class="hover:text-gray-300">
+Главная
+</a>
+
+<a href="matches.html" class="hover:text-gray-300">
+Матчи
+</a>
+
+<a href="teams.html" class="hover:text-gray-300">
+Команды
+</a>
+
+<a href="contacts.html" class="text-gray-300">
+Контакты
+</a>
+
+</nav>
+
+</div>
+
 </header>
 
-<section class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16">
 
-  <!-- Контакты -->
-  <div>
-    <h1 class="text-3xl font-semibold mb-6">Свяжитесь с нами</h1>
-    <p class="text-gray-600 mb-4">Email: contact@nbastats.com</p>
-    <p class="text-gray-600 mb-4">Телефон: +7 (777) 123-45-67</p>
-    <p class="text-gray-600 mb-6">Telegram: @nbastats</p>
-  </div>
+<!-- MAIN -->
 
-  <!-- Форма -->
-  <form class="bg-white p-8 rounded-2xl shadow space-y-6">
+<main class="flex-grow">
 
-    <div>
-      <label class="block text-sm mb-2">Имя</label>
-      <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black">
-    </div>
+<section class="py-20">
 
-    <div>
-      <label class="block text-sm mb-2">Email</label>
-      <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black">
-    </div>
+<div class="max-w-2xl mx-auto px-6">
 
-    <div>
-      <label class="block text-sm mb-2">Тема</label>
-      <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black">
-        <option>Общий вопрос</option>
-        <option>Предложение сотрудничества</option>
-        <option>Сообщить об ошибке</option>
-      </select>
-    </div>
+<h1 class="text-3xl font-bold text-center mb-2">
+Свяжитесь с нами
+</h1>
 
-    <div>
-      <label class="block text-sm mb-2">Сообщение</label>
-      <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
-    </div>
+<p class="text-gray-600 text-center mb-10">
+Есть вопросы по статистике NBA или предложения по сайту? Напишите нам.
+</p>
 
-    <div class="flex items-center">
-      <input type="checkbox" class="mr-2">
-      <span class="text-sm text-gray-600">Согласие на обработку данных</span>
-    </div>
 
-    <button type="submit" class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">
-      Отправить сообщение
-    </button>
+<!-- FORM CARD -->
 
-  </form>
+<div class="bg-white shadow-lg rounded-2xl p-8 hover:shadow-xl transition">
+
+<form id="feedbackForm" class="space-y-6">
+
+
+<!-- FULLNAME -->
+
+<div>
+
+<label class="block text-sm font-medium text-gray-700 mb-1">
+ФИО *
+</label>
+
+<div class="relative">
+
+<span class="absolute left-3 top-3 text-gray-400">
+👤
+</span>
+
+<input
+class="w-full border border-gray-300 rounded-lg pl-10 pr-4 py-3 focus:ring-2 focus:ring-black focus:border-black transition"
+type="text"
+id="fullname"
+placeholder="Иванов Иван Иванович"
+/>
+
+</div>
+
+</div>
+
+
+<!-- PHONE -->
+
+<div>
+
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Телефон *
+</label>
+
+<div class="relative">
+
+<span class="absolute left-3 top-3 text-gray-400">
+📞
+</span>
+
+<input
+class="w-full border border-gray-300 rounded-lg pl-10 pr-4 py-3 focus:ring-2 focus:ring-black focus:border-black transition"
+type="tel"
+id="phone"
+placeholder="+7 (999) 999-99-99"
+/>
+
+</div>
+
+</div>
+
+
+<!-- EMAIL -->
+
+<div>
+
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Email *
+</label>
+
+<div class="relative">
+
+<span class="absolute left-3 top-3 text-gray-400">
+✉️
+</span>
+
+<input
+class="w-full border border-gray-300 rounded-lg pl-10 pr-4 py-3 focus:ring-2 focus:ring-black focus:border-black transition"
+type="email"
+id="email"
+placeholder="mail@example.com"
+/>
+
+</div>
+
+</div>
+
+
+<!-- MESSAGE -->
+
+<div>
+
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Сообщение
+</label>
+
+<textarea
+id="message"
+rows="4"
+placeholder="Напишите ваше сообщение..."
+class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-black focus:border-black transition"
+></textarea>
+
+</div>
+
+
+<!-- AGREEMENT -->
+
+<div class="flex items-start space-x-2">
+
+<input
+type="checkbox"
+id="agreement"
+class="mt-1"
+required
+/>
+
+<label class="text-sm text-gray-600">
+Я согласен на обработку персональных данных
+</label>
+
+</div>
+
+
+<!-- BUTTONS -->
+
+<div class="flex gap-4">
+
+<button
+type="submit"
+class="flex-1 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition font-medium"
+>
+
+Отправить
+
+</button>
+
+<button
+type="reset"
+class="flex-1 bg-gray-200 py-3 rounded-lg hover:bg-gray-300 transition"
+>
+
+Очистить
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
 
 </section>
 
-<footer class="bg-black text-white py-10 text-center">
-  <p class="text-gray-400 text-sm">© 2026 NBAStats</p>
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="bg-black text-white text-center py-6 mt-10">
+
+<p class="text-sm text-gray-400">
+Учебный проект по фронтенд-разработке
+</p>
+
 </footer>
+
+
+<!-- SCRIPTS -->
+
+<script src="scripts/validation.js"></script>
+<script src="scripts/consoleLogger.js"></script>
 
 </body>
 </html>
